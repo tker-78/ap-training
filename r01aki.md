@@ -20,7 +20,7 @@ Secure /Multipurpose Internet Mail Extensions. 電子メールの暗号化と、
 #### SPF
 Sender Policy Framework. 電子メールにおいて、送信元が他のドメインを詐称していないことを受信側で検出するための技術.
 
-#### 水飲み場攻撃
+#### 水飲み場攻撃  
 
 #### C&C(Command and Control) サーバ
 すでにマルウェアに感染したコンピュータ群に対して不正はコマンドを指示し、ターゲットとなるコンピュータを攻撃するサーバ.
