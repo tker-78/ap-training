@@ -1,0 +1,9 @@
+---
+---
+
+@import "{{site.theme}}";
+
+h2:before {
+    font-family: "FontAwesome";
+    content: "\f083"
+}
