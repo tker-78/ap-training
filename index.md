@@ -1,10 +1,7 @@
 ---
 layout: default
 ---
-
-## About This Page
-このページは、応用情報技術者試験(AP)の学習ログです.
-<br>
+## Contents
 
 APの試験日は、2022/10/9.  
 学習開始日は、2022/7/12.  
