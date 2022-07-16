@@ -53,6 +53,8 @@ APの試験日は、2022/10/9.
 [1. セキュリティ](category/security.md)  
 [2. データベース](category/database.md)  
 [3. ネットワーク](category/network.md)  
+[4. プログラミング](category/programming.md)  
+[5. システムアーキテクチャ](category/system-architecture.md)  
 
 
 ### 午前問題
