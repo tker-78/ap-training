@@ -3,13 +3,23 @@
 
 @import "{{site.theme}}";
 
+h2 {
+  color: darkblue;
+}
+
+h3 {
+  color: darkblue;
+}
+
 h2::before {
     font-family: "Font Awesome 5 Free";
     content: "\f6fc"; //mountain
+    color: darkblue;
 }
 
 h3::before {
   font-family: "Font Awesome 5 Free";
   content: "\f6f0"; //horse
   font-weight: 300;
+  color: darkblue;
 }
