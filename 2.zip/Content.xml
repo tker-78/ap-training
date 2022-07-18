@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sheet version="5" app_version="26">
+<markup version="1" identifier="markdownxl" displayName="Markdown XL">
+	<tag definition="heading1" pattern="#"></tag>
+	<tag definition="heading2" pattern="##"></tag>
+	<tag definition="heading3" pattern="###"></tag>
+	<tag definition="heading4" pattern="####"></tag>
+	<tag definition="heading5" pattern="#####"></tag>
+	<tag definition="heading6" pattern="######"></tag>
+	<tag definition="codeblock" pattern="``"></tag>
+	<tag definition="codeblock" pattern="''"></tag>
+	<tag definition="comment" pattern="%%"></tag>
+	<tag definition="nativeblock" pattern="~~"></tag>
+	<tag definition="blockquote" pattern="&gt;"></tag>
+	<tag definition="orderedList" pattern="\d."></tag>
+	<tag definition="unorderedList" pattern="*"></tag>
+	<tag definition="unorderedList" pattern="+"></tag>
+	<tag definition="unorderedList" pattern="-"></tag>
+	<tag definition="divider" pattern="----"></tag>
+	<tag definition="filename" pattern="@:"></tag>
+	<tag definition="code" startPattern="`" endPattern="`"></tag>
+	<tag definition="delete" startPattern="||" endPattern="||"></tag>
+	<tag definition="emph" startPattern="_" endPattern="_"></tag>
+	<tag definition="emph" startPattern="*" endPattern="*"></tag>
+	<tag definition="inlineComment" startPattern="++" endPattern="++"></tag>
+	<tag definition="inlineNative" startPattern="~" endPattern="~"></tag>
+	<tag definition="mark" startPattern="::" endPattern="::"></tag>
+	<tag definition="strong" startPattern="__" endPattern="__"></tag>
+	<tag definition="strong" startPattern="**" endPattern="**"></tag>
+	<tag definition="annotation" startPattern="{" endPattern="}"></tag>
+	<tag definition="link" startPattern="[" endPattern="]"></tag>
+	<tag definition="footnote" pattern="(fn)"></tag>
+	<tag definition="image" pattern="(img)"></tag>
+	<tag definition="video" pattern="(vid)"></tag>
+</markup>
+<string xml:space="preserve">
+<p><tags><tag kind="heading1"># </tag></tags>2. 検索</p>
+<p><tags><tag kind="heading2">## </tag></tags>SELECT文</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT * FROM Expense</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>別名</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT expense_id AS ID</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>FROM Expense</p>
+<p></p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT id, name AS "名前", category AS "分類"</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>FROM Expense</p>
+<p></p>
+<p><element kind="image"><attribute identifier="image">5146e806d2ff48a5939c00bf53c7fcd5</attribute></element></p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>定数の出力</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT name, 38 AS VALUE, '2020-01-01' AS DATE</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>From Expense;</p>
+<p><element kind="image"><attribute identifier="image">64710719932943c68cd14823ba179f4d</attribute></element></p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>結果から重複行を省く</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT DISTINCT category</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>  FROM Expense;</p>
+<p></p>
+<p><element kind="image"><attribute identifier="image">9ca7499302f34af8b1dbe7b660aa6237</attribute></element></p>
+<p><element kind="image"><attribute identifier="image">95f30bbaade74c83ba74d76df4a58e6f</attribute></element></p>
+<p></p>
+<p><element kind="code" startTag="`" endTag="`">NUll</element>は1種類のデータとして扱われる.</p>
+<p></p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT DISTINCT name, category</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>  FROM Expense;</p>
+<p>複数のカラムを指定した場合、全てのカラムの値が一致するものは重複として削除される.</p>
+<p></p>
+<p><element kind="image"><attribute identifier="image">ca845d0dccf443d592eae36a962a579d</attribute></element></p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>WHERE句</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT category</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>  FROM Expense</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>  WHERE name = 'iPad';</p>
+<p><element kind="image"><attribute identifier="image">cc916ea9268e4f358b4044f6844715b6</attribute></element></p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>コメントの書き方</p>
+<p><element kind="code" startTag="`" endTag="`">--</element>を先頭につける</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>-- SELECT name, date</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>--   FROM Expense</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>--   WHERE name = 'iPad';</p>
+<p>または、<element kind="code" startTag="`" endTag="`">/*</element> <element kind="code" startTag="`" endTag="`">*/</element>で囲む.</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>/*</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>SELECT name, date</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>  FROM Expense</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>  WHERE name = 'iPad';</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>*/</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>算術演算子と比較演算子</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT 1 * 10;</p>
+<p><element kind="image"><attribute identifier="image">4af835b0e7a0485888c2ed6c03668c57</attribute></element></p>
+<p></p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT 2 * 10 AS VALUE;</p>
+<p><element kind="image"><attribute identifier="image">466edcd0ea304a2ca0713b2d9e5184c0</attribute></element></p>
+<p></p>
+<p><element kind="code" startTag="`" endTag="`">NULL</element>を含む計算結果は全て<element kind="code" startTag="`" endTag="`">NULL</element>になる</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>SELECT NULL * 10 AS VALUE;</p>
+<p><element kind="image"><attribute identifier="image">5d151f362ae54b3481b9df860f54c1a2</attribute></element></p>
+<p></p>
+<p><tags><tag kind="heading3">### </tag></tags>比較演算子</p>
+<p><element kind="code" startTag="`" endTag="`">=</element>: equal</p>
+<p><element kind="code" startTag="`" endTag="`">&lt;&gt;</element>: not equal</p>
+<p><element kind="code" startTag="`" endTag="`">&gt;=</element>: 以上</p>
+<p><element kind="code" startTag="`" endTag="`">&gt;</element>: より大きい</p>
+<p><element kind="code" startTag="`" endTag="`">&lt;=</element>: 以下</p>
+<p><element kind="code" startTag="`" endTag="`">&lt;</element>: より小さい</p>
+<p></p>
+<p><element kind="code" startTag="`" endTag="`">IS NULL</element>: NULLかどうか判断する</p>
+<p><element kind="code" startTag="`" endTag="`">IS NOT NULL</element>: NOT NULLかどうか判断する</p>
+<p></p>
+<p><element kind="code" startTag="`" endTag="`">&lt;&gt;</element>では<element kind="code" startTag="`" endTag="`">NULL</element>を検索できない.</p>
+<p></p>
+<p><tags><tag kind="heading3">### </tag></tags>論理演算子</p>
+<p><element kind="code" startTag="`" endTag="`">NOT</element>:</p>
+<p><element kind="code" startTag="`" endTag="`">AND</element>:</p>
+<p><element kind="code" startTag="`" endTag="`">OR</element>:</p>
+<p></p>
+<p><element kind="code" startTag="`" endTag="`">AND</element>は<element kind="code" startTag="`" endTag="`">OR</element>よりも優先度が高い.</p>
+<p><element kind="code" startTag="`" endTag="`">OR</element>を優先する場合は、<element kind="code" startTag="`" endTag="`">()</element>で囲むこと.</p>
+<p></p>
+<p><element kind="code" startTag="`" endTag="`">TRUE</element>:</p>
+<p><element kind="code" startTag="`" endTag="`">FALSE</element>:</p>
+<p><element kind="code" startTag="`" endTag="`">UNKNOWN</element>: 真でも偽でもない場合の値.</p>
+<p></p>
+<p></p>
+<p></p></string>
+</sheet>

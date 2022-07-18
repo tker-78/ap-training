@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sheet version="5" app_version="26">
+<markup version="1" identifier="markdownxl" displayName="Markdown XL">
+	<tag definition="heading1" pattern="#"></tag>
+	<tag definition="heading2" pattern="##"></tag>
+	<tag definition="heading3" pattern="###"></tag>
+	<tag definition="heading4" pattern="####"></tag>
+	<tag definition="heading5" pattern="#####"></tag>
+	<tag definition="heading6" pattern="######"></tag>
+	<tag definition="codeblock" pattern="``"></tag>
+	<tag definition="codeblock" pattern="''"></tag>
+	<tag definition="comment" pattern="%%"></tag>
+	<tag definition="nativeblock" pattern="~~"></tag>
+	<tag definition="blockquote" pattern="&gt;"></tag>
+	<tag definition="orderedList" pattern="\d."></tag>
+	<tag definition="unorderedList" pattern="*"></tag>
+	<tag definition="unorderedList" pattern="+"></tag>
+	<tag definition="unorderedList" pattern="-"></tag>
+	<tag definition="divider" pattern="----"></tag>
+	<tag definition="filename" pattern="@:"></tag>
+	<tag definition="code" startPattern="`" endPattern="`"></tag>
+	<tag definition="delete" startPattern="||" endPattern="||"></tag>
+	<tag definition="emph" startPattern="_" endPattern="_"></tag>
+	<tag definition="emph" startPattern="*" endPattern="*"></tag>
+	<tag definition="inlineComment" startPattern="++" endPattern="++"></tag>
+	<tag definition="inlineNative" startPattern="~" endPattern="~"></tag>
+	<tag definition="mark" startPattern="::" endPattern="::"></tag>
+	<tag definition="strong" startPattern="__" endPattern="__"></tag>
+	<tag definition="strong" startPattern="**" endPattern="**"></tag>
+	<tag definition="annotation" startPattern="{" endPattern="}"></tag>
+	<tag definition="link" startPattern="[" endPattern="]"></tag>
+	<tag definition="footnote" pattern="(fn)"></tag>
+	<tag definition="image" pattern="(img)"></tag>
+	<tag definition="video" pattern="(vid)"></tag>
+</markup>
+<string xml:space="preserve">
+<p><tags><tag kind="heading1"># </tag></tags>1. 基本の操作</p>
+<p><tags><tag kind="heading2">## </tag></tags>テーブルの作成</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>CREATE DATABASE newdatabase;</p>
+<p></p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>CREATE TABLE Expense</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>(expense_id CHAR(4) NOT NULL,</p>
+<p><tags><tag kind="codeblock">￼</tag></tags> expense_name VARCHAR(100) NOT NULL,</p>
+<p><tags><tag kind="codeblock">￼</tag></tags> expense_category VARCHAR(100) NOT NULL,</p>
+<p><tags><tag kind="codeblock">￼</tag></tags> value INTEGER,</p>
+<p><tags><tag kind="codeblock">￼</tag></tags> data_of_register DATE,</p>
+<p><tags><tag kind="codeblock">￼</tag></tags> PRIMARY KEY expense_id));</p>
+<p> </p>
+<p><tags><tag kind="heading2">## </tag></tags>命名ルール</p>
+<p><tags><tag kind="unorderedList">- </tag></tags>テーブルと列名には半角文字のアルファベット、数字、アンダーバーのみが使える. <element kind="code" startTag="`" endTag="`">-</element>, <element kind="code" startTag="`" endTag="`">$</element>, <element kind="code" startTag="`" endTag="`">#</element>, <element kind="code" startTag="`" endTag="`">?</element>などの記号は使えない.</p>
+<p><tags><tag kind="unorderedList">- </tag></tags>名前の最初は必ず半角のアルファベット</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>データ型</p>
+<p><element kind="code" startTag="`" endTag="`">INTEGER</element>: 整数の型</p>
+<p><element kind="code" startTag="`" endTag="`">CHAR</element>: 固定長文字列. CHAR(最大長)で指定する.</p>
+<p><element kind="code" startTag="`" endTag="`">VARCHAR</element>: 可変長文字列. VARCHAR(最大長)で指定する.</p>
+<p><element kind="code" startTag="`" endTag="`">DATE</element>: 日付型.</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>制約</p>
+<p><element kind="code" startTag="`" endTag="`">NOT NULL</element>: 空白を禁止する.</p>
+<p><element kind="code" startTag="`" endTag="`">PRIMAY KEY</element>: 主キー制約.</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>テーブルの削除</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>DROP TEBLE Expense;</p>
+<p></p>
+<p>削除したテーブルとそのデータは復活できない.実行時には注意すること.</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>テーブル定義の変更</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>ALTER TABLE Expense ADD COLUMN expense_method VARCHAR(100);</p>
+<p></p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>ALTER TABLE Expense DROP COLUMN expense_category;</p>
+<p><tags><tag kind="codeblock">￼</tag></tags># カラムを削除</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>テーブルへのデータ登録</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>BEGIN TRANSACTION;</p>
+<p><tags><tag kind="codeblock">￼</tag></tags></p>
+<p><tags><tag kind="codeblock">￼</tag></tags>INSERT INTO Expense VALUES ('0001', 'T-shirt', 'cloth', 1000, 500, '2022-05-29');</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>INSERT INTO Expense VALUES ('0002', 'Hat', 2000, 400, '2022-05-14');</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>...</p>
+<p><tags><tag kind="codeblock">￼</tag></tags></p>
+<p><tags><tag kind="codeblock">￼</tag></tags>COMMIT;</p>
+<p></p>
+<p><tags><tag kind="heading2">## </tag></tags>データのアップデート</p>
+<p><tags><tag kind="codeblock">￼</tag></tags><attribute identifier="syntax">sql</attribute>UPDATE Expense SET value = 2000</p>
+<p><tags><tag kind="codeblock">￼</tag></tags>WHERE id = '007';</p>
+<p></p>
+<p></p></string>
+</sheet>
