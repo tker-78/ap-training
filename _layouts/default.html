@@ -53,7 +53,7 @@
         {% endif %} -->
       </header>
       <section>
-      {% include toc.html html=content h_max=3 %}
+      {% include toc.html html=content h_max=3 sanitize=true %}
       
       {{ content }}
 
