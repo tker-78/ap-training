@@ -1,9 +1,9 @@
 theme: jekyll-theme-minimal
 title: 応用情報 学習ログ
 description: このページは、応用情報技術者試験(AP)に向けた学習ログです.
-google_analytics: G-17BFKX9WXX
+# google_analytics: G-17BFKX9WXX
 
 breadcrumbs:
   root:
-    hide: true  # show breadcrumbs on root/home page
+    hide: false # show breadcrumbs on root/home page
     image: false # Show image or title text
