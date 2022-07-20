@@ -51,6 +51,10 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
         {% endif %} -->
+
+        { % include nav-breadcrumbs.html %}
+        
+
       </header>
       <section>
       {% include toc.html html=content h_max=3 sanitize=true %}
