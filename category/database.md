@@ -1,3 +1,9 @@
+---
+title: database
+crumbtitle: database
+---
+
+
 # 2. データベース
 ## データベースの設計
 ### 概念設計
